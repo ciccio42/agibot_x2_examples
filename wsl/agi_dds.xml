@@ -7,9 +7,6 @@
         <sendBufferSize>20971520</sendBufferSize>
         <receiveBufferSize>20971520</receiveBufferSize>
         <maxInitialPeersRange>120</maxInitialPeersRange>
-        <interfaceWhiteList>
-          <address>192.168.88.141</address>
-        </interfaceWhiteList>
       </transport_descriptor>
       <transport_descriptor>
         <transport_id>SHM_transport</transport_id>

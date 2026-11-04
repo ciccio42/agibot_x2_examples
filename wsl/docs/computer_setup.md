@@ -46,11 +46,7 @@ e impostare la rete WiFi del robot come **Privata**.
 
 ### 2b. Profilo DDS `~/agibot_x2_examples/wsl/agi_dds.xml`
 
-Il file del profilo DDS è già fornito e preconfigurato nello script Bash usato per predisporre WSL all'utilizzo con il robot. Se è stato eseguito lo script di setup, non è necessario creare il file: occorre però aggiornare al suo interno l'indirizzo IP della WSL sul WiFi del robot. Sostituire `192.168.88.42` con l'IP effettivo, verificabile con `ip -4 addr`.
-
-**Suggerimento:** per evitare di dover aggiornare il profilo DDS a ogni connessione, è consigliabile configurare un indirizzo IP statico per la scheda Wi-Fi di Windows utilizzata per collegarsi all'hotspot del robot. Poiché WSL è configurato in modalità `networkingMode=mirrored`, utilizza la stessa rete e condivide l'indirizzo IP dell'interfaccia Wi-Fi di Windows. Di conseguenza, è sufficiente configurare l'indirizzo statico direttamente nelle impostazioni di rete di Windows, senza modificare separatamente la configurazione di rete di WSL.
-
-Una volta impostato l'indirizzo statico, utilizzare lo stesso IP nel file `agi_dds.xml` e verificare che corrisponda a quello effettivamente assegnato alla connessione Wi-Fi.
+Il file del profilo DDS è già fornito e preconfigurato nello script Bash usato per predisporre WSL all'utilizzo con il robot. Se è stato eseguito lo script di setup, non è necessario creare il file.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -63,9 +59,6 @@ Una volta impostato l'indirizzo statico, utilizzare lo stesso IP nel file `agi_d
         <sendBufferSize>20971520</sendBufferSize>
         <receiveBufferSize>20971520</receiveBufferSize>
         <maxInitialPeersRange>120</maxInitialPeersRange>
-        <interfaceWhiteList>
-          <address>192.168.88.42</address>
-        </interfaceWhiteList>
       </transport_descriptor>
       <transport_descriptor>
         <transport_id>SHM_transport</transport_id>

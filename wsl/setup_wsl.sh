@@ -134,6 +134,11 @@ ros2 daemon start
 
 EOF
 
+export ROS_LOCALHOST_ONLY=0
+export ROS_DOMAIN_ID=0
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+export FASTRTPS_DEFAULT_PROFILES_FILE="$HOME/agibot_x2_examples/wsl/agi_dds.xml"
+
 # Add user to dialout group
 sudo usermod -aG dialout "$USER_NAME"
 

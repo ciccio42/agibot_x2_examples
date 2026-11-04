@@ -24,6 +24,7 @@ wget https://x2-aimdk.agibot.com/downloads/aimdk-sdk-v1_1_0-aimdk-aarch64-faf4c9
     mv aimdk-aarch64-faf4c945-artifacts aimdk
 
 source /opt/ros/humble/setup.bash && colcon build --symlink-install
+source install/setup.bash
 
 # ============================================================
 #Cleanup
